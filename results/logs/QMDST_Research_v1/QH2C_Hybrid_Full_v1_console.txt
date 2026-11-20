@@ -1,0 +1,36 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261120144625
+Username: PHAMPUTINL\admin
+RunAs User: PHAMPUTINL\admin
+Configuration Name: 
+Machine: PHAMPUTINL (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\admin\AppData\Local\Programs\Microsoft VS Code\8a14f0cc1b\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 14472
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is ..\results\logs\QMDST_Research_v1\QH2C_Hybrid_Full_v1_console.txt
+(mdst-dehaze)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cadmin\x5cOneDrive\x5cDocuments\x5cQuantum ML\x5cMDST-Dehaze\x5cscriptsPS C:\Users\admin\OneDrive\Documents\Quantum ML\MDST-Dehaze\scripts> ]633;B
+PS>python -u .\train_QH2C_Full_QMDST.py
+
+(mdst-dehaze)
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cadmin\x5cOneDrive\x5cDocuments\x5cQuantum ML\x5cMDST-Dehaze\x5cscriptsPS C:\Users\admin\OneDrive\Documents\Quantum ML\MDST-Dehaze\scripts> ]633;B
+PS>Select-String -Path .\train_QH2C_Full_QMDST.py -Pattern "HYBRID_CATEGORY\.as_posix"
+(mdst-dehaze)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cadmin\x5cOneDrive\x5cDocuments\x5cQuantum ML\x5cMDST-Dehaze\x5cscriptsPS C:\Users\admin\OneDrive\Documents\Quantum ML\MDST-Dehaze\scripts> ]633;B
+PS>python -m py_compile .\train_QH2C_Full_QMDST.py
+
+(mdst-dehaze)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cadmin\x5cOneDrive\x5cDocuments\x5cQuantum ML\x5cMDST-Dehaze\x5cscriptsPS C:\Users\admin\OneDrive\Documents\Quantum ML\MDST-Dehaze\scripts> ]633;B
+PS>python -u .\train_QH2C_Full_QMDST.py
+
+(mdst-dehaze)
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cadmin\x5cOneDrive\x5cDocuments\x5cQuantum ML\x5cMDST-Dehaze\x5cscriptsPS C:\Users\admin\OneDrive\Documents\Quantum ML\MDST-Dehaze\scripts> ]633;B

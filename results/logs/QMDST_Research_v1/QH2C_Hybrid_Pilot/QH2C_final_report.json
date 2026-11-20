@@ -1,0 +1,32 @@
+{
+    "experiment": "QMDST_Research_v1/QH2C_Hybrid_Pilot",
+    "model": "QDSNetEncoder + frozen DSNet Teacher Decoder",
+    "quantum_framework": "PennyLane",
+    "pennylane_version": "0.45.1",
+    "pytorch_version": "2.7.1+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "epochs": 1,
+    "training_patches": 180,
+    "validation_patches": 175,
+    "validation_scenes": 5,
+    "classical_initialization": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\H2C_Classical\\Sen_Best_PSNR.pth",
+    "classical_tensors_loaded_exactly": 124,
+    "quantum_circuit_parameters": 24,
+    "teacher_encoder_checkpoint": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\Ten.pth",
+    "teacher_decoder_checkpoint": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\Tde.pth",
+    "best_validation_psnr": 14.098752464538046,
+    "best_validation_ssim": 0.5048786324311131,
+    "mean_quantum_gradient_norm_last_epoch": 3.275309515515801e-05,
+    "mean_quantum_weight_delta_last_epoch": 0.00015579716337520545,
+    "quantum_gradient_nonzero_steps_last_epoch": 180,
+    "quantum_update_nonzero_steps_last_epoch": 180,
+    "checkpoints": {
+        "last": "QSen_last.pth",
+        "best_psnr": "QSen_Best_PSNR.pth",
+        "best_ssim": "QSen_Best_SSIM.pth",
+        "final": "QSen.pth",
+        "training_state": "QH2C_training_state_last.pth"
+    },
+    "metrics": "QH2C_metrics.csv",
+    "classical_checkpoint_modified": false
+}

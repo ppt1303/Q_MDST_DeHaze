@@ -1,0 +1,11 @@
+{
+    "experiment": "QMDST_Research_v1/H2C_Classical",
+    "epochs": 200,
+    "training_patches": 180,
+    "validation_patches": 175,
+    "validation_scenes": 5,
+    "best_validation_psnr": 14.47249626093026,
+    "best_validation_ssim": 0.5162181579929914,
+    "best_psnr_checkpoint": "Sen_Best_PSNR.pth",
+    "best_ssim_checkpoint": "Sen_Best_SSIM.pth"
+}

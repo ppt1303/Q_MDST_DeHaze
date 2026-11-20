@@ -1,0 +1,8 @@
+# Python 3.12; CUDA 12.8 supports the RTX 50 series.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.7.1+cu128
+torchvision==0.22.1+cu128
+numpy==1.26.0
+pillow==11.0.0
+opencv-python==4.11.0.86
+scikit-image==0.24.0

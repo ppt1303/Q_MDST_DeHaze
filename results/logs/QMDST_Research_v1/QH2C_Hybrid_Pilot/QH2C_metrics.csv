@@ -1,0 +1,2 @@
+﻿epoch,self_perceptual,l1,perceptual,contrastive,total,quantum_grad_norm,quantum_weight_delta,quantum_grad_nonzero_steps,quantum_update_nonzero_steps,val_psnr_full_scene,val_ssim_full_scene,learning_rate,seconds
+1,0.07609070661581224,1.29288370443715,0.4763361429174741,0.1592362271828784,2.0045467658175364,3.275309515515801e-05,0.00015579716337520545,180,180,14.098752464538046,0.5048786324311131,0.0001,48.159122705459595

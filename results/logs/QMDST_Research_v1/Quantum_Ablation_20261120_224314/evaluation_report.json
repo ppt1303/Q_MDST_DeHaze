@@ -1,0 +1,149 @@
+{
+    "experiment": "QMDST_Research_v1/Quantum_Ablation",
+    "run_id": "20261120_224314",
+    "protocol": {
+        "validation_patches": 175,
+        "validation_scenes": 5,
+        "reconstruction": "Average overlapping patch predictions",
+        "output_clipping": "[0, 1]",
+        "metrics": "metrics.metrics.psnr and metrics.metrics.ssim",
+        "shared_decoder": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\Tde.pth",
+        "training_performed": false,
+        "checkpoints_modified": false
+    },
+    "ablation_definition": {
+        "type": "whole_quantum_modulation_block_bypass",
+        "details": "The block-off model loads the exact same QH2C state_dict as the full Hybrid model, but its forward method calls the original DSNet.Encoder.forward directly and skips quantum_modulation(feat). This removes the entire added QuantumChannelModulation block, including pre_quantum, the PennyLane circuit, post_quantum, and residual_scale.",
+        "interpretation_limit": "This measures the contribution of the complete added QuantumChannelModulation block, not the isolated effect of the 24 variational circuit parameters alone.",
+        "full_and_block_off_state_dict_identical": true
+    },
+    "environment": {
+        "device": "cuda",
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "pytorch": "2.7.1+cu128"
+    },
+    "checkpoints": {
+        "classical": {
+            "path": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\H2C_Classical\\Sen_Best_PSNR.pth",
+            "sha256": "922fc5a4f24cd19188e02e3d9f89e09e11a17d479602512b017dbf51c12ea50a"
+        },
+        "hybrid": {
+            "path": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\QH2C_Hybrid_Full_v1\\QSen_Best_PSNR.pth",
+            "sha256": "aec884565511b5e201b3ffefba4af7559a933d1d81ad9e58d95aa8da32139702",
+            "quantum_circuit_parameters": 24
+        },
+        "teacher_decoder": {
+            "path": "C:\\Users\\admin\\OneDrive\\Documents\\Quantum ML\\MDST-Dehaze\\results\\checkpoints\\QMDST_Research_v1\\Tde.pth",
+            "sha256": "d45f57a52fbd385370ddea5037c18ece400df7a50128afafb50ed79584e77275"
+        }
+    },
+    "results": {
+        "Classical_H2C": {
+            "model": "Classical_H2C",
+            "mean_psnr": 14.472506736689391,
+            "mean_ssim": 0.5162171814508102,
+            "evaluation_loop_seconds": 4.251319000002695,
+            "seconds_per_patch": 0.02429325142858683,
+            "patches_per_second": 41.16369531429871,
+            "per_scene": {
+                "46.png": {
+                    "PSNR": 11.295948407865431,
+                    "SSIM": 0.47005947285351857
+                },
+                "47.png": {
+                    "PSNR": 12.622956214044176,
+                    "SSIM": 0.5005784030146049
+                },
+                "48.png": {
+                    "PSNR": 14.829732088129234,
+                    "SSIM": 0.4492908363784894
+                },
+                "49.png": {
+                    "PSNR": 17.969018084762283,
+                    "SSIM": 0.625722953611965
+                },
+                "50.png": {
+                    "PSNR": 15.644878888645835,
+                    "SSIM": 0.535434241395473
+                }
+            },
+            "description": "Original DSNet Encoder checkpoint; no Quantum Modulation."
+        },
+        "Full_Quantum_Hybrid_H2C": {
+            "model": "Full_Quantum_Hybrid_H2C",
+            "mean_psnr": 14.376605887285796,
+            "mean_ssim": 0.4922003800530751,
+            "evaluation_loop_seconds": 5.376150199997937,
+            "seconds_per_patch": 0.0307208582857025,
+            "patches_per_second": 32.55117388648612,
+            "per_scene": {
+                "46.png": {
+                    "PSNR": 11.597924259353935,
+                    "SSIM": 0.4649992057770341
+                },
+                "47.png": {
+                    "PSNR": 11.084320915661532,
+                    "SSIM": 0.4696303250785869
+                },
+                "48.png": {
+                    "PSNR": 15.00468778203538,
+                    "SSIM": 0.40172297337499113
+                },
+                "49.png": {
+                    "PSNR": 19.10401895630062,
+                    "SSIM": 0.6271181677226186
+                },
+                "50.png": {
+                    "PSNR": 15.092077523077524,
+                    "SSIM": 0.4975312283121447
+                }
+            },
+            "description": "QDSNet Encoder with the complete trained Quantum Modulation block."
+        },
+        "QH2C_QuantumBlock_Off": {
+            "model": "QH2C_QuantumBlock_Off",
+            "mean_psnr": 14.386492661717108,
+            "mean_ssim": 0.4929304263157494,
+            "evaluation_loop_seconds": 4.125392599991756,
+            "seconds_per_patch": 0.02357367199995289,
+            "patches_per_second": 42.42020504917513,
+            "per_scene": {
+                "46.png": {
+                    "PSNR": 11.599358644690923,
+                    "SSIM": 0.4647676116117032
+                },
+                "47.png": {
+                    "PSNR": 11.08466275560496,
+                    "SSIM": 0.46981738408929985
+                },
+                "48.png": {
+                    "PSNR": 15.01029817667861,
+                    "SSIM": 0.4017769283470833
+                },
+                "49.png": {
+                    "PSNR": 19.134828288864338,
+                    "SSIM": 0.6288496585866509
+                },
+                "50.png": {
+                    "PSNR": 15.103315442746707,
+                    "SSIM": 0.49944054894400985
+                }
+            },
+            "description": "Same QH2C checkpoint, but the entire quantum_modulation block is bypassed."
+        }
+    },
+    "comparisons": {
+        "full_hybrid_minus_classical": {
+            "delta_psnr_db": -0.09590084940359489,
+            "delta_ssim": -0.0240168013977351
+        },
+        "block_off_minus_full_hybrid": {
+            "delta_psnr_db": 0.009886774431311807,
+            "delta_ssim": 0.0007300462626743109
+        },
+        "block_off_minus_classical": {
+            "delta_psnr_db": -0.08601407497228308,
+            "delta_ssim": -0.023286755135060788
+        }
+    }
+}

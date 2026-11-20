@@ -1,0 +1,11 @@
+{
+    "experiment": "QMDST_Research_v1",
+    "epochs": 100,
+    "training_patches": 180,
+    "validation_patches": 175,
+    "validation_scenes": 5,
+    "best_validation_psnr": 37.57617738651554,
+    "best_validation_ssim": 0.9913450952212584,
+    "best_psnr_checkpoint": "Ten.pth / Tde.pth",
+    "best_ssim_checkpoint": "Ten_Best_SSIM.pth / Tde_Best_SSIM.pth"
+}

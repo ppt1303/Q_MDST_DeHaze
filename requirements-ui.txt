@@ -1,0 +1,3 @@
+# Install inside the existing mdst-dehaze environment.
+# Keep the project's current PyTorch/CUDA and PennyLane versions.
+streamlit>=1.40
